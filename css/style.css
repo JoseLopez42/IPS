@@ -1,0 +1,140 @@
+/* ============================================
+   PrismaSalud IPS — CSS personalizado
+   Bootstrap 5 se encarga del layout base.
+   Aquí solo van colores y detalles propios.
+   ============================================ */
+
+/* ── Variables ── */
+:root {
+  --verde-oscuro:  #1a5c3a;
+  --verde-medio:   #1a8f8a;
+  --azul-teal:     #1aadb8;
+  --turquesa:      #2bbfbf;
+  --verde-btn:     #28a745;
+  --azul-sesion:   #17a2b8;
+}
+
+/* ── Navbar ── */
+.logo-placeholder {
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--verde-oscuro), var(--azul-teal));
+  color: #fff; font-weight: 800; font-size: 18px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+#navbar {
+    background: rgba(255,255,255,0.95) !important;
+    transition: all .3s ease;
+}
+
+#navbar.scrolled {
+    background: rgba(255,255,255,0.7) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.logo-img { width: 44px; height: 44px; object-fit: contain; }
+.logo-nombre { font-size: 16px; font-weight: 700; color: var(--turquesa); line-height: 1; }
+.logo-sub    { font-size: 11px; color: #6c757d; }
+
+.btn-sesion {
+  border: 1.5px solid var(--azul-sesion); color: var(--azul-sesion);
+  background: transparent; font-size: 12.5px; font-weight: 600;
+  transition: background .2s, color .2s;
+}
+.btn-sesion:hover { background: var(--azul-sesion); color: #fff; }
+
+.btn-agendar {
+  background: var(--verde-btn); color: #fff;
+  font-size: 12.5px; font-weight: 600; border: none;
+  transition: background .2s;
+}
+.btn-agendar:hover { background: #1e8c38; color: #fff; }
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(to right,
+    var(--verde-oscuro) 0%,
+    var(--verde-medio)  55%,
+    var(--azul-teal)    100%
+  );
+  min-height: 420px;
+}
+.hero-h1   { font-size: clamp(26px, 4vw, 38px); }
+.hero-badge {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff; font-size: 12px;
+  padding: 4px 14px; border-radius: 20px;
+}
+.accent-verde { color: #7de8c8; }
+.text-white-75 { color: rgba(255,255,255,.75) !important; }
+
+/* Tarjetas hero */
+.hero-card {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  transition: background .2s;
+}
+.hero-card:hover { background: rgba(255,255,255,.2); }
+.hero-card-ico {
+  width: 40px; height: 40px; flex-shrink: 0;
+  background: rgba(255,255,255,.18);
+}
+
+/* ── Stats ── */
+.stats-bar  { background: var(--verde-oscuro); }
+.stat-num   { font-size: 26px; font-weight: 800; color: #fff; }
+
+/* ── Servicios ── */
+.eyebrow {
+  border: 1px solid var(--turquesa); color: var(--turquesa);
+  font-size: 11.5px; font-weight: 600;
+  padding: 3px 12px; border-radius: 20px; letter-spacing: .5px;
+}
+.text-turquesa { color: var(--turquesa) !important; }
+
+.serv-card { transition: box-shadow .2s, transform .2s; }
+.serv-card:hover {
+  box-shadow: 0 6px 22px rgba(26,92,74,.13);
+  transform: translateY(-3px);
+}
+.link-mas { color: var(--turquesa); text-decoration: none; }
+.link-mas:hover { color: var(--verde-oscuro); }
+
+/* ── Testimonios ── */
+.test-card  { background: #f4f6f7; border: 1px solid #dde5e5; }
+.estrellas  { color: #f5a623; font-size: 15px; }
+.test-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #fff; flex-shrink: 0;
+}
+
+/* ── CTA Banner ── */
+.cta-banner {
+  background: linear-gradient(to right,
+    var(--verde-oscuro) 0%,
+    var(--verde-medio)  55%,
+    var(--azul-teal)    100%
+  );
+}
+
+/* ── Footer ── */
+.footer-bg { background: var(--verde-oscuro); }
+.footer-link {
+  color: rgba(255,255,255,.6); font-size: 13px; text-decoration: none;
+  transition: color .2s;
+}
+.footer-link:hover { color: #7de8c8; }
+
+.red-link {
+  width: 34px; height: 34px;
+  color: #fff; text-decoration: none;
+  font-size: 15px; transition: opacity .2s;
+}
+.red-link:hover { opacity: .82; color: #fff; }
+.red-fb { background: #1877f2; }
+.red-ig { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.red-wa { background: #25d366; }
